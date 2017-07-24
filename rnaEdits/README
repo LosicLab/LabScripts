@@ -1,0 +1,7 @@
+process goes:
+0) gatk to generate filtered vcf
+1) filterSNPs_go.sh
+2) grab vcf header, grep PASS vcf
+3) filter_vcf.sh
+4) make a list of NotAlu.filtered.nodindel.recode.vcf, $ blatreads_go.sh list.txt
+

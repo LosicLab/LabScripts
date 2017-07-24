@@ -1,0 +1,14 @@
+#! /bin/bash
+#BSUB -J sciclone
+#BSUB -e log.e
+#BSUB -o log.o
+#BSUB -q alloc
+#BSUB -W 5:00
+#BSUB -n 1
+#BSUB -P acc_PBG
+##BSUB -R "rusage[mem=3500]" 
+##BSUB -R "span[hosts=1]"
+module load R
+#requires a directroy name "vafs" with all your vaf files in it.  (chr pos ref alt vaf)
+Rscript /hpc/users/akersn01/scripts/TCGA/sciclone_noCNV.R
+
